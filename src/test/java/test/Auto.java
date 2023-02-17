@@ -9,16 +9,24 @@ public class Auto {
     static int cantidadCreados;
 
     int cantidadAsientos(){
-        return this.asientos.length;
+        int cont = 0;
+        for(Asiento a : this.asientos){
+            if(a!= null){
+                cont++;
+            }
+        }
+        return cont;
     }
 
     String verificarIntegridad(){
         boolean valido = this.registro == motor.registro;
         if (valido){
             for(Asiento asiento: this.asientos){
+                if (asiento != null){
                 if(asiento.registro != this.registro){
                     valido = false;
                     break;
+                }
                 }
             }
         }

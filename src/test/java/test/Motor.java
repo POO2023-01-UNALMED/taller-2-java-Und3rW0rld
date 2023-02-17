@@ -9,7 +9,7 @@ public class Motor {
     }
 
     void asignarTipo(String tipo){
-        tipo = tipo.toUpperCase();
+        tipo = tipo.toLowerCase();
         if(tipo.equals("electrico") || tipo.equals("gasolina")){
             this.tipo = tipo;
         }
